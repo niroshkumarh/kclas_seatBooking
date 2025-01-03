@@ -258,7 +258,7 @@ document.getElementById('projectForm').addEventListener('submit', async function
                 text: result.message,
             }).then(() => {
                 window.location.reload(); // Reload the page
-            });
+            }); // Show success message
         } else {
             Swal.fire({
                 icon: 'error',
