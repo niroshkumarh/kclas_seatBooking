@@ -200,7 +200,7 @@
 
     <script>
         // Replace with your Google Apps Script Web App URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz0j6uw9uXYhoh9938nzCyz4GbLfZVeWxS7o7qfAx4mRrTzWp6EEQV8KG77AxJuivDEdw/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxIpuMITeLNVEurhsBqALLBejNvvZCen6lIm8oBwVsIpnPFIXA3GjFM_JmQ3ZtNDkLnjw/exec';
 
         // Populate the project dropdown dynamically
         document.addEventListener('DOMContentLoaded', async () => {
@@ -237,8 +237,8 @@ document.getElementById('projectForm').addEventListener('submit', async function
 
     const form = document.forms['projectForm'];
     const submitButton = document.querySelector('button[type="submit"]');
-    submitButton.disabled = true; // Disable the button
-    submitButton.textContent = 'Submitting...'; // Change button text
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
 
     try {
         const response = await fetch(scriptURL, {
@@ -256,7 +256,7 @@ document.getElementById('projectForm').addEventListener('submit', async function
                 title: 'Success',
                 text: result.message,
             }).then(() => {
-                window.location.reload(); // Reload the page
+                window.location.reload();
             });
         } else {
             Swal.fire({
@@ -273,12 +273,11 @@ document.getElementById('projectForm').addEventListener('submit', async function
         });
         console.error('Form submission error:', error);
     } finally {
-        submitButton.disabled = false; // Re-enable the button
-        submitButton.textContent = 'Submit'; // Reset button text
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit';
     }
 });
 
-  
   
   </script>
 </body>
